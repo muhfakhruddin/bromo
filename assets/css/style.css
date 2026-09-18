@@ -348,9 +348,9 @@ body {
 .about-title {
   margin: 18px 0 0;
 
-  font-size: clamp(38px, 5vw, 64px);
-  line-height: 1.05;
-  letter-spacing: -0.04em;
+  font-size: clamp(32px, 3.6vw, 48px);
+  line-height: 1.12;
+  letter-spacing: -0.035em;
 }
 
 .about-text {
