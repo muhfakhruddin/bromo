@@ -319,3 +319,62 @@ body {
   }
 
 }
+
+/* =========================
+   ABOUT BROMO
+   ========================= */
+
+.about-section {
+  background-color: var(--bromo-dark-red);
+  color: white;
+  padding: 110px 0;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 0.8fr 1.4fr;
+  gap: 90px;
+  align-items: start;
+}
+
+.section-label {
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  opacity: 0.7;
+}
+
+.about-title {
+  margin: 18px 0 0;
+
+  font-size: clamp(38px, 5vw, 64px);
+  line-height: 1.05;
+  letter-spacing: -0.04em;
+}
+
+.about-text {
+  margin: 0 0 24px;
+
+  font-size: 19px;
+  line-height: 1.75;
+
+  color: rgba(255, 255, 255, 0.84);
+}
+
+.about-text strong {
+  color: white;
+}
+
+@media (max-width: 800px) {
+
+  .about-section {
+    padding: 80px 0;
+  }
+
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 45px;
+  }
+
+}
