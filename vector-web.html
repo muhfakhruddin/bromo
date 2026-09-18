@@ -2,211 +2,154 @@
 <html lang="en">
 
 <head>
-
   <meta charset="UTF-8">
-
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0"
-  >
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>Vector-Web | BROMO</title>
 
   <meta
     name="description"
-    content="Vector-Web is a BROMO community observation platform for collecting and exploring spatial observations of disease vectors and potential breeding sites."
+    content="Vector-Web is a community-based spatial observation platform for exploring suspected disease vector reports across Indonesia."
   >
 
+  <!-- Leaflet -->
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+  >
+
+  <!-- BROMO -->
   <link
     rel="stylesheet"
     href="assets/css/style.css"
   >
-
 </head>
 
 
 <body>
 
-
 <!-- =====================================================
      NAVIGATION
-     ===================================================== -->
+===================================================== -->
 
 <header class="site-header">
-
   <div class="container navbar">
 
     <a href="index.html" class="brand">
-
-      <span class="brand-mark">
-        B
-      </span>
-
-      <span class="brand-name">
-        BROMO
-      </span>
-
+      <span class="brand-mark">B</span>
+      <span class="brand-name">BROMO</span>
     </a>
 
-
     <nav class="nav-links">
-
-      <a href="index.html">
-        Home
-      </a>
-
-      <a href="products.html">
-        Research Products
-      </a>
-
-      <a href="vector-web.html">
-        Vector-Web
-      </a>
-
-      <a href="publications.html">
-        Publications
-      </a>
-
-      <a href="about.html">
-        About
-      </a>
-
+      <a href="index.html">Home</a>
+      <a href="products.html">Research Products</a>
+      <a href="vector-web.html">Vector-Web</a>
+      <a href="publications.html">Publications</a>
+      <a href="about.html">About</a>
     </nav>
 
   </div>
-
 </header>
-
 
 
 <!-- =====================================================
      HERO
-     ===================================================== -->
+===================================================== -->
 
 <section class="product-detail-hero">
-
   <div class="container">
 
     <div class="product-breadcrumb">
       BROMO / Vector-Web
     </div>
 
-
     <div class="product-detail-grid">
 
       <div>
-
         <div class="product-code">
-          Community Observation Platform
+          Community Vector Observation Platform
         </div>
 
         <h1 class="product-detail-title">
           Vector-Web
         </h1>
-
       </div>
-
 
       <div>
 
         <p class="product-detail-lead">
-          A community-based research platform for collecting,
-          organizing, and spatially exploring observations of
-          disease vectors and potential breeding sites.
+          A community-based spatial research platform for
+          collecting and exploring reports of suspected
+          disease vectors and potential breeding sites
+          across Indonesia.
         </p>
 
-
         <div class="product-tags">
-
-          <span class="product-tag">
-            Community Observation
-          </span>
-
-          <span class="product-tag">
-            Vector
-          </span>
-
-          <span class="product-tag">
-            Spatial Data
-          </span>
-
-          <span class="product-tag">
-            Mapping
-          </span>
-
+          <span class="product-tag">Community Reports</span>
+          <span class="product-tag">Vector Surveillance</span>
+          <span class="product-tag">Spatial Data</span>
+          <span class="product-tag">Indonesia</span>
         </div>
 
-
         <div class="hero-actions">
-
-          <a
-            href="#observation-map"
-            class="btn btn-primary"
-          >
+          <a href="#vector-dashboard" class="btn btn-primary">
             Explore Map
           </a>
 
-          <a
-            href="#submit-observation"
-            class="btn btn-secondary"
-          >
+          <a href="#submit-observation" class="btn btn-secondary">
             Submit Observation
           </a>
-
         </div>
 
       </div>
 
     </div>
-
   </div>
-
 </section>
-
 
 
 <!-- =====================================================
      01 OVERVIEW
-     ===================================================== -->
+===================================================== -->
 
 <section class="model-section">
-
   <div class="container">
 
     <div class="model-section-grid">
 
       <div>
-
-        <div class="model-step">
-          01
-        </div>
+        <div class="model-step">01</div>
 
         <div class="section-label model-label">
           Overview
         </div>
-
       </div>
-
 
       <div>
 
         <h2 class="model-section-title">
-          Community observations
-          as spatial research data.
+          Community observations for
+          exploratory vector surveillance.
         </h2>
 
         <p class="model-text">
-          Vector-Web is designed as a participatory research
-          environment where community observations related to
-          disease vectors and potential breeding sites can be
-          documented and explored spatially.
+          Vector-Web provides a spatial interface for documenting
+          community reports of suspected disease vectors, larvae,
+          and potential breeding sites.
         </p>
 
         <p class="model-text">
-          Submitted observations are not automatically treated
-          as scientifically verified records. Instead, Vector-Web
-          separates community reports from observations that have
-          undergone a verification process.
+          Areas receiving a larger concentration of reports are
+          represented with stronger map intensity, allowing
+          clusters of suspected vector observations to be explored
+          geographically.
+        </p>
+
+        <p class="model-text">
+          Report density represents community-generated
+          observations and should not be interpreted directly
+          as confirmed vector abundance, disease incidence,
+          or epidemiological risk.
         </p>
 
       </div>
@@ -214,18 +157,16 @@
     </div>
 
   </div>
-
 </section>
 
 
-
 <!-- =====================================================
-     02 OBSERVATION DASHBOARD
-     ===================================================== -->
+     02 VECTOR DASHBOARD
+===================================================== -->
 
 <section
   class="vector-dashboard-section"
-  id="observation-map"
+  id="vector-dashboard"
 >
 
   <div class="container">
@@ -239,11 +180,15 @@
         </div>
 
         <h2 class="model-section-title">
-          Explore community observations.
+          Suspected Vector Report Density
         </h2>
 
-      </div>
+        <p class="model-text">
+          Explore the geographical concentration and
+          verification status of community reports.
+        </p>
 
+      </div>
 
       <div class="vector-prototype-badge">
         Research Prototype
@@ -252,23 +197,138 @@
     </div>
 
 
+    <!-- =============================
+         FILTERS
+    ============================== -->
 
-    <!-- SUMMARY CARDS -->
+    <div class="vector-map-filters">
+
+      <div class="vector-filter-group">
+
+        <label class="vector-filter-label" for="provinceFilter">
+          Province
+        </label>
+
+        <select
+          class="vector-select"
+          id="provinceFilter"
+        >
+          <option value="all">
+            All Provinces
+          </option>
+
+          <option value="dki">
+            DKI Jakarta
+          </option>
+
+          <option value="jabar">
+            West Java
+          </option>
+
+          <option value="banten">
+            Banten
+          </option>
+
+          <option value="jateng">
+            Central Java
+          </option>
+
+          <option value="jatim">
+            East Java
+          </option>
+
+          <option value="bali">
+            Bali
+          </option>
+
+        </select>
+
+      </div>
+
+
+      <div class="vector-filter-group">
+
+        <label class="vector-filter-label" for="cityFilter">
+          City / Regency
+        </label>
+
+        <select
+          class="vector-select"
+          id="cityFilter"
+        >
+          <option value="all">
+            All Cities / Regencies
+          </option>
+        </select>
+
+      </div>
+
+
+      <div class="vector-filter-group">
+
+        <label class="vector-filter-label" for="periodFilter">
+          Observation Period
+        </label>
+
+        <select
+          class="vector-select"
+          id="periodFilter"
+        >
+          <option value="all">All Time</option>
+          <option value="30">Last 30 Days</option>
+          <option value="90">Last 3 Months</option>
+          <option value="365">Last 12 Months</option>
+        </select>
+
+      </div>
+
+    </div>
+
+
+    <!-- =============================
+         SUMMARY
+    ============================== -->
 
     <div class="vector-stat-grid">
 
       <div class="vector-stat-card">
 
         <span class="vector-stat-label">
-          Community Reports
+          Total Reports
         </span>
 
-        <strong class="vector-stat-value">
-          —
+        <strong
+          class="vector-stat-value"
+          id="totalReports"
+        >
+          0
         </strong>
 
         <span class="vector-stat-note">
-          Awaiting live data
+          Community observations
+        </span>
+
+      </div>
+
+
+      <div class="vector-stat-card">
+
+        <span class="vector-stat-label">
+          Verified
+        </span>
+
+        <strong
+          class="vector-stat-value"
+          id="verifiedReports"
+        >
+          0
+        </strong>
+
+        <span
+          class="vector-stat-note"
+          id="verifiedPercent"
+        >
+          0% of reports
         </span>
 
       </div>
@@ -280,12 +340,18 @@
           Pending Verification
         </span>
 
-        <strong class="vector-stat-value">
-          —
+        <strong
+          class="vector-stat-value"
+          id="pendingReports"
+        >
+          0
         </strong>
 
-        <span class="vector-stat-note">
-          Verification module planned
+        <span
+          class="vector-stat-note"
+          id="pendingPercent"
+        >
+          0% of reports
         </span>
 
       </div>
@@ -294,32 +360,21 @@
       <div class="vector-stat-card">
 
         <span class="vector-stat-label">
-          Verified Observations
+          Reported Only
         </span>
 
-        <strong class="vector-stat-value">
-          —
+        <strong
+          class="vector-stat-value"
+          id="reportedOnly"
+        >
+          0
         </strong>
 
-        <span class="vector-stat-note">
-          No live database connected
-        </span>
-
-      </div>
-
-
-      <div class="vector-stat-card">
-
-        <span class="vector-stat-label">
-          Observation Areas
-        </span>
-
-        <strong class="vector-stat-value">
-          —
-        </strong>
-
-        <span class="vector-stat-note">
-          Spatial summary planned
+        <span
+          class="vector-stat-note"
+          id="reportedPercent"
+        >
+          0% of reports
         </span>
 
       </div>
@@ -327,178 +382,213 @@
     </div>
 
 
+    <!-- =============================
+         MAP
+    ============================== -->
 
-    <!-- MAP APPLICATION -->
+    <div class="vector-map-container">
 
-    <div class="vector-app">
+      <div
+        id="vectorMap"
+        class="vector-live-map"
+      ></div>
 
-      <!-- LEFT PANEL -->
 
-      <aside class="vector-panel">
+      <!-- LEGEND -->
 
-        <div class="vector-panel-header">
+      <div class="vector-live-legend">
 
-          <span class="vector-panel-kicker">
-            VECTOR-WEB
-          </span>
+        <strong>
+          Suspected Vector Report Density
+        </strong>
 
-          <h3>
-            Observation Explorer
-          </h3>
+        <div class="density-gradient"></div>
 
-          <p>
-            Explore submitted observations according
-            to their type and verification status.
-          </p>
-
+        <div class="density-labels">
+          <span>Low</span>
+          <span>Moderate</span>
+          <span>High</span>
         </div>
 
+        <p>
+          Yellow → Orange → Red
+        </p>
 
-        <div class="vector-filter-group">
+      </div>
 
-          <label class="vector-filter-label">
-            Observation Type
-          </label>
 
-          <select
-            class="vector-select"
-            disabled
-          >
-            <option>
-              All observations
-            </option>
+      <!-- MAP NOTE -->
 
-            <option>
-              Adult mosquito
-            </option>
+      <div class="vector-map-disclaimer">
 
-            <option>
-              Larvae
-            </option>
+        <strong>
+          Interpretation
+        </strong>
 
-            <option>
-              Potential breeding site
-            </option>
+        <p>
+          Red areas indicate a higher concentration of
+          community reports of suspected vectors or
+          potential breeding sites.
+        </p>
 
-          </select>
+        <p>
+          They do not represent confirmed vector abundance
+          or disease risk.
+        </p>
 
+      </div>
+
+    </div>
+
+
+    <!-- =============================
+         SELECTED AREA
+    ============================== -->
+
+    <div class="vector-area-summary">
+
+      <div>
+
+        <span class="vector-panel-kicker">
+          SELECTED AREA
+        </span>
+
+        <h3 id="selectedArea">
+          Indonesia
+        </h3>
+
+        <p>
+          Composition of community reports within
+          the currently selected map area.
+        </p>
+
+      </div>
+
+
+      <div class="vector-area-numbers">
+
+        <div>
+          <span>Total</span>
+          <strong id="areaTotal">0</strong>
         </div>
 
-
-        <div class="vector-filter-group">
-
-          <label class="vector-filter-label">
-            Verification Status
-          </label>
-
-          <select
-            class="vector-select"
-            disabled
-          >
-            <option>
-              All status
-            </option>
-
-            <option>
-              Community Report
-            </option>
-
-            <option>
-              Pending Verification
-            </option>
-
-            <option>
-              Verified Observation
-            </option>
-
-          </select>
-
+        <div>
+          <span>Verified</span>
+          <strong id="areaVerified">0</strong>
         </div>
 
-
-        <div class="vector-panel-note">
-
-          <strong>
-            Prototype interface
-          </strong>
-
-          <p>
-            Interactive filtering will become available
-            when the observation database is connected.
-          </p>
-
+        <div>
+          <span>Pending</span>
+          <strong id="areaPending">0</strong>
         </div>
 
-      </aside>
+        <div>
+          <span>Reported Only</span>
+          <strong id="areaReported">0</strong>
+        </div>
+
+      </div>
+
+    </div>
 
 
+    <p class="vector-demo-note">
+      Current observations are demonstration data used to
+      develop and test the Vector-Web interface. They do not
+      represent actual surveillance findings.
+    </p>
 
-      <!-- MAP -->
-
-      <div class="vector-map">
-
-        <div class="vector-map-grid"></div>
+  </div>
+</section>
 
 
-        <div class="vector-map-center">
+<!-- =====================================================
+     03 HOW TO READ THE MAP
+===================================================== -->
 
-          <div class="vector-map-symbol">
-            +
+<section class="model-section">
+  <div class="container">
+
+    <div class="model-section-grid">
+
+      <div>
+        <div class="model-step">03</div>
+
+        <div class="section-label model-label">
+          Map Interpretation
+        </div>
+      </div>
+
+
+      <div>
+
+        <h2 class="model-section-title">
+          More reports,
+          stronger map intensity.
+        </h2>
+
+        <p class="model-text">
+          Vector-Web aggregates community observations
+          spatially. Locations with relatively few reports
+          appear yellow, while increasing concentrations
+          progress through orange toward red.
+        </p>
+
+
+        <div class="vector-summary-grid">
+
+          <div class="vector-summary-card">
+
+            <span>
+              LOW
+            </span>
+
+            <strong>
+              Lower Report Density
+            </strong>
+
+            <p>
+              Relatively fewer suspected vector reports
+              have been submitted in the area.
+            </p>
+
           </div>
 
-          <span class="vector-map-kicker">
-            INTERACTIVE MAP
-          </span>
 
-          <h3>
-            Community Observation Map
-          </h3>
+          <div class="vector-summary-card">
 
-          <p>
-            Spatial observations will be displayed here
-            after the mapping and database modules are connected.
-          </p>
+            <span>
+              MODERATE
+            </span>
 
-        </div>
+            <strong>
+              Moderate Report Density
+            </strong>
 
-
-        <div class="vector-map-legend">
-
-          <div class="vector-legend-title">
-            Observation Status
-          </div>
-
-          <div class="vector-legend-item">
-
-            <span class="vector-dot vector-dot-report"></span>
-
-            Community Report
+            <p>
+              A larger concentration of community
+              observations has been recorded.
+            </p>
 
           </div>
 
-          <div class="vector-legend-item">
 
-            <span class="vector-dot vector-dot-pending"></span>
+          <div class="vector-summary-card">
 
-            Pending Verification
+            <span>
+              HIGH
+            </span>
+
+            <strong>
+              Higher Report Density
+            </strong>
+
+            <p>
+              A comparatively high concentration of
+              suspected vector reports has been submitted.
+            </p>
 
           </div>
-
-          <div class="vector-legend-item">
-
-            <span class="vector-dot vector-dot-verified"></span>
-
-            Verified Observation
-
-          </div>
-
-        </div>
-
-
-        <div class="vector-map-warning">
-
-          Map intensity represents observation density,
-          not dengue incidence or disease risk.
 
         </div>
 
@@ -507,17 +597,15 @@
     </div>
 
   </div>
-
 </section>
 
 
-
 <!-- =====================================================
-     03 COMMUNITY OBSERVATION
-     ===================================================== -->
+     04 COMMUNITY REPORT
+===================================================== -->
 
 <section
-  class="model-section"
+  class="model-section model-section-soft"
   id="submit-observation"
 >
 
@@ -527,12 +615,10 @@
 
       <div>
 
-        <div class="model-step">
-          03
-        </div>
+        <div class="model-step">04</div>
 
         <div class="section-label model-label">
-          Community Observation
+          Community Report
         </div>
 
       </div>
@@ -541,14 +627,15 @@
       <div>
 
         <h2 class="model-section-title">
-          From field observation
-          to structured data.
+          Report a suspected vector
+          observation.
         </h2>
 
         <p class="model-text">
-          The reporting module is intended to provide a simple
-          mechanism for documenting observations made by
-          community members or participating field observers.
+          The reporting module will allow community members
+          to document suspected vectors, larvae, or potential
+          breeding sites together with supporting spatial
+          and observational information.
         </p>
 
 
@@ -565,7 +652,9 @@
             </h3>
 
             <p>
-              Form preview — data submission is not yet active.
+              Form preview — submission will be activated
+              when the database and verification system
+              are connected.
             </p>
 
           </div>
@@ -580,11 +669,9 @@
               </label>
 
               <select disabled>
-
-                <option>
-                  Select observation type
-                </option>
-
+                <option>Suspected adult mosquito</option>
+                <option>Suspected larvae</option>
+                <option>Potential breeding site</option>
               </select>
 
             </div>
@@ -598,7 +685,37 @@
 
               <input
                 type="text"
-                placeholder="Date of observation"
+                placeholder="Observation date"
+                disabled
+              >
+
+            </div>
+
+
+            <div class="vector-field">
+
+              <label>
+                Province
+              </label>
+
+              <input
+                type="text"
+                placeholder="Province"
+                disabled
+              >
+
+            </div>
+
+
+            <div class="vector-field">
+
+              <label>
+                City / Regency
+              </label>
+
+              <input
+                type="text"
+                placeholder="City / Regency"
                 disabled
               >
 
@@ -613,7 +730,7 @@
 
               <input
                 type="text"
-                placeholder="Location will be selected from the map"
+                placeholder="Location selected from map / GPS"
                 disabled
               >
 
@@ -629,12 +746,12 @@
               <div class="vector-upload-preview">
 
                 <strong>
-                  Photo upload
+                  Upload supporting image
                 </strong>
 
                 <span>
-                  Image submission will be enabled
-                  in the reporting module.
+                  Photo submission will be enabled
+                  in the live reporting module.
                 </span>
 
               </div>
@@ -673,29 +790,24 @@
     </div>
 
   </div>
-
 </section>
 
 
-
 <!-- =====================================================
-     04 VERIFICATION WORKFLOW
-     ===================================================== -->
+     05 VERIFICATION
+===================================================== -->
 
-<section class="model-section model-section-soft">
-
+<section class="model-section">
   <div class="container">
 
     <div class="model-section-grid">
 
       <div>
 
-        <div class="model-step">
-          04
-        </div>
+        <div class="model-step">05</div>
 
         <div class="section-label model-label">
-          Observation Status
+          Verification
         </div>
 
       </div>
@@ -704,14 +816,15 @@
       <div>
 
         <h2 class="model-section-title">
-          Separating reports
-          from verified observations.
+          Every report retains
+          its verification status.
         </h2>
 
         <p class="model-text">
-          Vector-Web distinguishes between observations
-          submitted by the community and observations that
-          have undergone a verification process.
+          Report density is calculated from submitted community
+          observations, while verification status is retained
+          separately to communicate the level of review
+          associated with those reports.
         </p>
 
 
@@ -724,12 +837,12 @@
             </span>
 
             <h3>
-              Community Report
+              Reported
             </h3>
 
             <p>
-              An observation is submitted with available
-              location, image, date, and field information.
+              A community observation has been submitted
+              but has not yet entered or completed review.
             </p>
 
           </div>
@@ -751,9 +864,8 @@
             </h3>
 
             <p>
-              The observation remains clearly identified
-              as unverified while supporting information
-              is reviewed.
+              Supporting information is being reviewed
+              according to the verification procedure.
             </p>
 
           </div>
@@ -771,12 +883,12 @@
             </span>
 
             <h3>
-              Verified Observation
+              Verified
             </h3>
 
             <p>
-              Observations meeting the defined verification
-              criteria can be classified as verified records.
+              The observation has met the verification
+              criteria defined by the research protocol.
             </p>
 
           </div>
@@ -788,119 +900,12 @@
     </div>
 
   </div>
-
 </section>
-
-
-
-<!-- =====================================================
-     05 SPATIAL SUMMARY
-     ===================================================== -->
-
-<section class="model-section">
-
-  <div class="container">
-
-    <div class="model-section-grid">
-
-      <div>
-
-        <div class="model-step">
-          05
-        </div>
-
-        <div class="section-label model-label">
-          Spatial Summary
-        </div>
-
-      </div>
-
-
-      <div>
-
-        <h2 class="model-section-title">
-          Turning observations
-          into spatial summaries.
-        </h2>
-
-        <p class="model-text">
-          Aggregated observations can support exploratory
-          descriptions of where reports are concentrated,
-          how observations change over time, and which
-          observation categories are most frequently reported.
-        </p>
-
-
-        <div class="vector-summary-grid">
-
-          <div class="vector-summary-card">
-
-            <span>
-              Spatial Distribution
-            </span>
-
-            <strong>
-              Observation Density
-            </strong>
-
-            <p>
-              Explore the spatial concentration of
-              submitted observations.
-            </p>
-
-          </div>
-
-
-          <div class="vector-summary-card">
-
-            <span>
-              Temporal Distribution
-            </span>
-
-            <strong>
-              Observation Trends
-            </strong>
-
-            <p>
-              Explore how community reports vary
-              across observation periods.
-            </p>
-
-          </div>
-
-
-          <div class="vector-summary-card">
-
-            <span>
-              Observation Type
-            </span>
-
-            <strong>
-              Category Summary
-            </strong>
-
-            <p>
-              Compare reported vector observations
-              and potential breeding sites.
-            </p>
-
-          </div>
-
-        </div>
-
-      </div>
-
-    </div>
-
-  </div>
-
-</section>
-
 
 
 <!-- =====================================================
      06 DATA & METHODOLOGY
-     ===================================================== -->
+===================================================== -->
 
 <section class="model-section model-section-dark">
 
@@ -910,9 +915,7 @@
 
       <div>
 
-        <div class="model-step">
-          06
-        </div>
+        <div class="model-step">06</div>
 
         <div class="section-label model-label">
           Data &amp; Methodology
@@ -924,34 +927,34 @@
       <div>
 
         <h2 class="model-section-title">
-          Transparent interpretation
-          of community-generated data.
+          Community-generated data
+          require careful interpretation.
         </h2>
 
         <p class="model-text">
-          Community-generated observations require careful
-          interpretation. Reporting intensity may vary across
-          locations and periods and should not be interpreted
-          directly as vector abundance, disease incidence,
-          or epidemiological risk.
+          Differences in reporting activity may reflect
+          community participation, population distribution,
+          accessibility, awareness, or other factors in
+          addition to the underlying presence of vectors.
         </p>
 
         <p class="model-text">
-          The methodological framework for Vector-Web will
-          document data collection, verification procedures,
-          spatial aggregation, privacy protection, analytical
-          methods, and limitations of the observation data.
+          Therefore, areas with high report density should
+          be interpreted as locations with a high concentration
+          of suspected vector reports and not automatically
+          as locations with high vector abundance or high
+          disease transmission risk.
         </p>
 
 
         <div class="scientific-reference">
 
           <span>
-            Data Interpretation
+            Map Interpretation
           </span>
 
           <strong>
-            Observation ≠ Disease Risk
+            Report Density ≠ Disease Risk
           </strong>
 
         </div>
@@ -961,14 +964,12 @@
     </div>
 
   </div>
-
 </section>
-
 
 
 <!-- =====================================================
      FOOTER
-     ===================================================== -->
+===================================================== -->
 
 <footer class="model-section model-section-soft">
 
@@ -977,13 +978,10 @@
     <div class="model-section-grid">
 
       <div>
-
         <div class="brand-name">
           BROMO
         </div>
-
       </div>
-
 
       <div>
 
@@ -1005,7 +1003,13 @@
 </footer>
 
 
+<!-- Leaflet -->
+<script
+  src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js">
+</script>
+
+<!-- Vector-Web -->
+<script src="assets/js/vector-map.js"></script>
+
 </body>
-
 </html>
-
