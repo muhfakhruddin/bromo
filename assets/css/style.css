@@ -1,0 +1,21 @@
+/* BROMO - Main Stylesheet */
+
+:root {
+  --bromo-red: #a61919;
+  --bromo-dark-red: #7a0c0c;
+  --bromo-white: #ffffff;
+  --bromo-ivory: #fcfaf8;
+  --bromo-black: #171414;
+  --bromo-gray: #6f6a67;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--bromo-ivory);
+  color: var(--bromo-black);
+}
