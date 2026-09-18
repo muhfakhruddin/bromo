@@ -681,3 +681,23 @@ body {
   }
 
 }
+
+/* Clickable research framework */
+
+.approach-link {
+  text-decoration: none;
+  color: var(--bromo-black);
+
+  transition:
+    background-color 0.25s ease,
+    transform 0.25s ease;
+}
+
+.approach-link:hover {
+  background-color: var(--bromo-ivory);
+}
+
+.approach-link:hover h3 {
+  color: var(--bromo-red);
+}
+
