@@ -467,13 +467,12 @@ body {
   text-transform: uppercase;
 }
 
-.product-title {
-  margin: 10px 0 15px;
+.products-title {
+  margin: 15px 0 0;
 
-  font-size: 30px;
-  line-height: 1.1;
-
-  letter-spacing: -0.03em;
+  font-size: clamp(32px, 3.6vw, 48px);
+  line-height: 1.12;
+  letter-spacing: -0.035em;
 }
 
 .product-description {
