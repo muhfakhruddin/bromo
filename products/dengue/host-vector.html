@@ -38,9 +38,7 @@
 
     <a href="../../index.html" class="brand">
 
-      <span class="brand-mark">
-        B
-      </span>
+      <span class="brand-mark">B</span>
 
       <span class="brand-name">
         BROMO
@@ -111,9 +109,9 @@
       <div>
 
         <p class="product-detail-lead">
-          A mathematical model for exploring dengue transmission
-          dynamics through interactions between human and
-          mosquito populations.
+          A mathematical framework for exploring dengue
+          transmission dynamics through interactions between
+          human hosts and mosquito vectors.
         </p>
 
 
@@ -125,6 +123,10 @@
 
           <span class="product-tag">
             Host–Vector
+          </span>
+
+          <span class="product-tag">
+            SIR–UV
           </span>
 
           <span class="product-tag">
@@ -144,7 +146,7 @@
 
 
 <!-- =========================
-     MODEL OVERVIEW
+     01 OVERVIEW
      ========================= -->
 
 <section class="model-section">
@@ -174,17 +176,17 @@
         </h2>
 
         <p class="model-text">
-          The host–vector framework represents dengue transmission
-          as a dynamic interaction between human hosts and mosquito
-          vectors. Changes in one population can influence infection
-          dynamics in the other population over time.
+          Host–vector models describe dengue transmission as
+          a dynamic interaction between human hosts and mosquito
+          vectors. Infection can move between these populations
+          through mosquito-mediated transmission.
         </p>
 
         <p class="model-text">
-          This research product is designed to provide a computational
-          environment for exploring model behavior, evaluating
-          transmission dynamics, and examining model outputs under
-          different data and parameter settings.
+          This modeling framework provides a basis for exploring
+          transmission dynamics over time and for investigating
+          how changes in model assumptions, parameters, and data
+          may influence epidemic behavior.
         </p>
 
       </div>
@@ -198,7 +200,7 @@
 
 
 <!-- =========================
-     MODEL WORKFLOW
+     02 MODEL STRUCTURE
      ========================= -->
 
 <section class="model-section model-section-soft">
@@ -214,7 +216,7 @@
         </div>
 
         <div class="section-label model-label">
-          Model Workflow
+          Model Structure
         </div>
 
       </div>
@@ -223,81 +225,37 @@
       <div>
 
         <h2 class="model-section-title">
-          From data to model exploration.
+          SIR–UV host–vector framework.
         </h2>
 
+        <p class="model-text">
+          The model organizes the human population into
+          susceptible, infectious, and recovered compartments,
+          while the mosquito population is represented through
+          susceptible and infectious vector states.
+        </p>
 
-        <div class="workflow-list">
 
-          <div class="workflow-item">
+        <div class="model-placeholder">
 
-            <span class="workflow-number">
-              01
-            </span>
-
-            <div>
-              <h3>Input Data</h3>
-
-              <p>
-                Prepare or upload temporal dengue data
-                required by the model.
-              </p>
-            </div>
-
+          <div class="model-placeholder-label">
+            MODEL DIAGRAM
           </div>
 
+          <h3>
+            Human and vector compartments
+          </h3>
 
-          <div class="workflow-item">
+          <p>
+            A compartmental diagram illustrating transitions
+            within the human population and transmission between
+            human hosts and mosquito vectors will be presented here.
+          </p>
 
-            <span class="workflow-number">
-              02
-            </span>
-
-            <div>
-              <h3>Model Configuration</h3>
-
-              <p>
-                Configure model parameters and relevant
-                assumptions for the analysis.
-              </p>
-            </div>
-
-          </div>
-
-
-          <div class="workflow-item">
-
-            <span class="workflow-number">
-              03
-            </span>
-
-            <div>
-              <h3>Run Model</h3>
-
-              <p>
-                Process the selected data and parameter
-                configuration through the host–vector model.
-              </p>
-            </div>
-
-          </div>
-
-
-          <div class="workflow-item">
-
-            <span class="workflow-number">
-              04
-            </span>
-
-            <div>
-              <h3>Explore Results</h3>
-
-              <p>
-                Examine simulations, predictions, model
-                behavior, and relevant quantitative outputs.
-              </p>
-            </div>
-
+          <div class="model-structure-preview">
+            Human: S → I → R
+            <br>
+            Vector: U → V
           </div>
 
         </div>
@@ -313,7 +271,7 @@
 
 
 <!-- =========================
-     INTERACTIVE MODEL
+     03 MATHEMATICAL MODEL
      ========================= -->
 
 <section class="model-section">
@@ -329,7 +287,7 @@
         </div>
 
         <div class="section-label model-label">
-          Interactive Model
+          Mathematical Model
         </div>
 
       </div>
@@ -338,35 +296,161 @@
       <div>
 
         <h2 class="model-section-title">
-          Explore the model.
+          Mathematical formulation.
         </h2>
 
         <p class="model-text">
-          The interactive computational module will allow
-          users to work with data, configure model parameters,
-          run simulations or predictions, and explore
-          model-generated results.
+          The transmission process is represented using a
+          system of mathematical equations describing changes
+          in human and mosquito populations over time.
         </p>
 
 
         <div class="model-placeholder">
 
           <div class="model-placeholder-label">
-            HOST–VECTOR MODEL
+            MODEL EQUATIONS
           </div>
 
           <h3>
-            Interactive module
+            Governing equations
           </h3>
 
           <p>
-            Model equations, data inputs, parameter controls,
-            simulations, and visualization components will
-            be integrated here.
+            The complete system of model equations and variable
+            definitions will be displayed in this section.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================
+     04 PARAMETERS
+     ========================= -->
+
+<section class="model-section model-section-soft">
+
+  <div class="container">
+
+    <div class="model-section-grid">
+
+      <div>
+
+        <div class="model-step">
+          04
+        </div>
+
+        <div class="section-label model-label">
+          Parameters
+        </div>
+
+      </div>
+
+
+      <div>
+
+        <h2 class="model-section-title">
+          Model parameters and assumptions.
+        </h2>
+
+        <p class="model-text">
+          Parameters define the biological and epidemiological
+          processes represented in the model. Their values may
+          be obtained from data, estimated computationally, or
+          informed by scientific literature.
+        </p>
+
+
+        <div class="model-placeholder">
+
+          <div class="model-placeholder-label">
+            PARAMETER TABLE
+          </div>
+
+          <h3>
+            Parameter definitions
+          </h3>
+
+          <p>
+            Parameter symbols, descriptions, units, values,
+            estimation methods, and references will be
+            documented here.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================
+     05 DATA INPUT
+     ========================= -->
+
+<section class="model-section">
+
+  <div class="container">
+
+    <div class="model-section-grid">
+
+      <div>
+
+        <div class="model-step">
+          05
+        </div>
+
+        <div class="section-label model-label">
+          Data Input
+        </div>
+
+      </div>
+
+
+      <div>
+
+        <h2 class="model-section-title">
+          Prepare data for model exploration.
+        </h2>
+
+        <p class="model-text">
+          Data can be organized according to the requirements
+          of the model before being used for parameter estimation,
+          simulation, prediction, or other computational analyses.
+        </p>
+
+
+        <div class="model-placeholder">
+
+          <div class="model-placeholder-label">
+            DATA WORKSPACE
+          </div>
+
+          <h3>
+            Dataset input
+          </h3>
+
+          <p>
+            Data templates, dataset selection, and upload
+            functionality will be provided in this workspace.
           </p>
 
           <span class="model-development">
-            In Development
+            Data Interface
           </span>
 
         </div>
@@ -382,7 +466,201 @@
 
 
 <!-- =========================
-     SCIENTIFIC BASIS
+     06 MODEL CONFIGURATION
+     ========================= -->
+
+<section class="model-section model-section-soft">
+
+  <div class="container">
+
+    <div class="model-section-grid">
+
+      <div>
+
+        <div class="model-step">
+          06
+        </div>
+
+        <div class="section-label model-label">
+          Model Configuration
+        </div>
+
+      </div>
+
+
+      <div>
+
+        <h2 class="model-section-title">
+          Configure the computational experiment.
+        </h2>
+
+        <p class="model-text">
+          Model settings can be adjusted to explore different
+          assumptions, initial conditions, parameter values,
+          simulation periods, and analytical scenarios.
+        </p>
+
+
+        <div class="model-placeholder">
+
+          <div class="model-placeholder-label">
+            CONFIGURATION PANEL
+          </div>
+
+          <h3>
+            Simulation settings
+          </h3>
+
+          <p>
+            Parameter controls, initial conditions, time horizon,
+            and additional model settings will be configured here.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================
+     07 INTERACTIVE SIMULATION
+     ========================= -->
+
+<section class="model-section">
+
+  <div class="container">
+
+    <div class="model-section-grid">
+
+      <div>
+
+        <div class="model-step">
+          07
+        </div>
+
+        <div class="section-label model-label">
+          Interactive Simulation
+        </div>
+
+      </div>
+
+
+      <div>
+
+        <h2 class="model-section-title">
+          Run and explore the model.
+        </h2>
+
+        <p class="model-text">
+          The interactive computational environment will connect
+          model inputs, parameter settings, and numerical procedures
+          to generate model simulations and analytical outputs.
+        </p>
+
+
+        <div class="model-placeholder">
+
+          <div class="model-placeholder-label">
+            COMPUTATIONAL WORKSPACE
+          </div>
+
+          <h3>
+            Run Model
+          </h3>
+
+          <p>
+            Interactive controls and computational execution
+            will be integrated into this section.
+          </p>
+
+          <span class="model-development">
+            Interactive Module
+          </span>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================
+     08 RESULTS
+     ========================= -->
+
+<section class="model-section model-section-soft">
+
+  <div class="container">
+
+    <div class="model-section-grid">
+
+      <div>
+
+        <div class="model-step">
+          08
+        </div>
+
+        <div class="section-label model-label">
+          Results
+        </div>
+
+      </div>
+
+
+      <div>
+
+        <h2 class="model-section-title">
+          Explore model-generated outputs.
+        </h2>
+
+        <p class="model-text">
+          Simulation trajectories, fitted dynamics, predictions,
+          and other quantitative outputs generated by the model
+          will be visualized in this section.
+        </p>
+
+
+        <div class="model-placeholder">
+
+          <div class="model-placeholder-label">
+            RESULTS & VISUALIZATION
+          </div>
+
+          <h3>
+            Model outputs
+          </h3>
+
+          <p>
+            Interactive figures, numerical summaries, model
+            diagnostics, and other relevant results will
+            appear here.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================
+     09 SCIENTIFIC BASIS
      ========================= -->
 
 <section class="model-section model-section-dark">
@@ -394,7 +672,7 @@
       <div>
 
         <div class="model-step">
-          04
+          09
         </div>
 
         <div class="section-label model-label">
@@ -411,20 +689,21 @@
         </h2>
 
         <p class="model-text">
-          The mathematical formulation, assumptions, parameter
-          definitions, computational procedures, and scientific
-          references associated with this model will be documented
-          alongside the interactive implementation.
+          This section documents the scientific basis of the
+          model, including its assumptions, mathematical
+          formulation, computational methodology, and connection
+          to related research.
         </p>
+
 
         <div class="scientific-reference">
 
           <span>
-            Publication
+            Publications
           </span>
 
           <strong>
-            Reference to be added
+            Scientific references will be linked here
           </strong>
 
         </div>
