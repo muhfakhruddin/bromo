@@ -701,3 +701,224 @@ body {
   color: var(--bromo-red);
 }
 
+/* =========================
+   INTERACTIVE MODEL PAGE
+   ========================= */
+
+.model-section {
+  padding: 100px 0;
+  background-color: white;
+}
+
+.model-section-soft {
+  background-color: var(--bromo-ivory);
+}
+
+.model-section-grid {
+  display: grid;
+  grid-template-columns: 0.55fr 1.45fr;
+  gap: 90px;
+}
+
+.model-step {
+  margin-bottom: 14px;
+
+  color: var(--bromo-red);
+
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.15em;
+}
+
+.model-label {
+  color: var(--bromo-black);
+  opacity: 1;
+}
+
+.model-section-title {
+  max-width: 720px;
+
+  margin: 0 0 28px;
+
+  font-size: clamp(32px, 3.6vw, 48px);
+  line-height: 1.12;
+  letter-spacing: -0.035em;
+}
+
+.model-text {
+  max-width: 760px;
+
+  margin: 0 0 20px;
+
+  color: var(--bromo-gray);
+
+  font-size: 18px;
+  line-height: 1.75;
+}
+
+
+/* WORKFLOW */
+
+.workflow-list {
+  margin-top: 40px;
+
+  border-top: 1px solid #e5dfdc;
+}
+
+.workflow-item {
+  display: grid;
+  grid-template-columns: 60px 1fr;
+
+  gap: 20px;
+
+  padding: 28px 0;
+
+  border-bottom: 1px solid #e5dfdc;
+}
+
+.workflow-number {
+  color: var(--bromo-red);
+
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.workflow-item h3 {
+  margin: 0 0 8px;
+
+  font-size: 21px;
+}
+
+.workflow-item p {
+  margin: 0;
+
+  color: var(--bromo-gray);
+
+  line-height: 1.6;
+}
+
+
+/* MODEL PLACEHOLDER */
+
+.model-placeholder {
+  margin-top: 40px;
+
+  padding: 45px;
+
+  border: 1px solid #e5dfdc;
+
+  background-color: var(--bromo-ivory);
+}
+
+.model-placeholder-label {
+  margin-bottom: 30px;
+
+  color: var(--bromo-red);
+
+  font-size: 11px;
+  font-weight: 800;
+
+  letter-spacing: 0.14em;
+}
+
+.model-placeholder h3 {
+  margin: 0 0 12px;
+
+  font-size: 28px;
+}
+
+.model-placeholder p {
+  max-width: 620px;
+
+  margin: 0;
+
+  color: var(--bromo-gray);
+
+  line-height: 1.7;
+}
+
+.model-development {
+  display: inline-block;
+
+  margin-top: 30px;
+  padding: 8px 12px;
+
+  border: 1px solid #ded8d5;
+  border-radius: 100px;
+
+  color: var(--bromo-gray);
+
+  font-size: 10px;
+  font-weight: 800;
+
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+
+/* SCIENTIFIC BASIS */
+
+.model-section-dark {
+  background-color: var(--bromo-dark-red);
+  color: white;
+}
+
+.model-section-dark .model-step {
+  color: rgba(255, 255, 255, 0.65);
+}
+
+.model-section-dark .model-label {
+  color: white;
+}
+
+.model-section-dark .model-text {
+  color: rgba(255, 255, 255, 0.78);
+}
+
+.scientific-reference {
+  max-width: 760px;
+
+  margin-top: 35px;
+  padding: 25px 0;
+
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.25);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.scientific-reference span {
+  color: rgba(255, 255, 255, 0.6);
+
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 800px) {
+
+  .model-section {
+    padding: 75px 0;
+  }
+
+  .model-section-grid {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+
+  .model-placeholder {
+    padding: 30px;
+  }
+
+  .scientific-reference {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+}
+
