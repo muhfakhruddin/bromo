@@ -378,3 +378,151 @@ body {
   }
 
 }
+
+/* =========================
+   RESEARCH PRODUCTS
+   ========================= */
+
+.products-section {
+  padding: 110px 0;
+  background-color: var(--bromo-white);
+}
+
+.products-heading {
+  display: grid;
+  grid-template-columns: 0.8fr 1.4fr;
+  gap: 90px;
+  margin-bottom: 60px;
+}
+
+.products-title {
+  margin: 15px 0 0;
+
+  font-size: clamp(38px, 5vw, 60px);
+  line-height: 1.05;
+  letter-spacing: -0.04em;
+}
+
+.products-intro {
+  margin: 0;
+  max-width: 700px;
+
+  color: var(--bromo-gray);
+
+  font-size: 18px;
+  line-height: 1.7;
+}
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+
+  border-top: 1px solid #e5dfdc;
+  border-left: 1px solid #e5dfdc;
+}
+
+.product-card {
+  min-height: 330px;
+
+  display: flex;
+  flex-direction: column;
+
+  padding: 38px;
+
+  border-right: 1px solid #e5dfdc;
+  border-bottom: 1px solid #e5dfdc;
+
+  text-decoration: none;
+  color: var(--bromo-black);
+
+  background-color: white;
+
+  transition:
+    background-color 0.25s ease,
+    transform 0.25s ease;
+}
+
+.product-card:hover {
+  background-color: var(--bromo-ivory);
+}
+
+.product-number {
+  color: var(--bromo-red);
+
+  font-size: 12px;
+  font-weight: 800;
+
+  letter-spacing: 0.15em;
+}
+
+.product-category {
+  margin-top: 35px;
+
+  color: var(--bromo-gray);
+
+  font-size: 12px;
+  font-weight: 700;
+
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.product-title {
+  margin: 10px 0 15px;
+
+  font-size: 30px;
+  line-height: 1.1;
+
+  letter-spacing: -0.03em;
+}
+
+.product-description {
+  margin: 0;
+
+  color: var(--bromo-gray);
+
+  line-height: 1.65;
+}
+
+.product-tags {
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: 7px;
+
+  margin-top: auto;
+  padding-top: 28px;
+}
+
+.product-tag {
+  padding: 7px 11px;
+
+  border: 1px solid #e1dcda;
+  border-radius: 100px;
+
+  color: var(--bromo-gray);
+
+  font-size: 11px;
+  font-weight: 700;
+}
+
+@media (max-width: 800px) {
+
+  .products-section {
+    padding: 80px 0;
+  }
+
+  .products-heading {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .products-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .product-card {
+    min-height: 300px;
+  }
+
+}
